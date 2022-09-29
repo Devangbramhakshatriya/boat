@@ -1,4 +1,5 @@
 
+
 var myIndex = 0;
 carousel();
 
@@ -80,7 +81,7 @@ arr=[
    },
   
   ];
-
+  
   arr1=[
     {
      video: "//cdn.shopify.com/s/files/1/0057/8938/4802/files/quinn_aNMbCNA29Xi8HUyLtIJkh_1300.mp4?v=1198252056860615988",

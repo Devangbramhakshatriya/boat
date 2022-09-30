@@ -172,8 +172,3 @@ arr=[
     cart.push(el);
     localStorage.setItem("yourcart",JSON.stringify(cart));
   }
-  
-  
-  
-  
-  

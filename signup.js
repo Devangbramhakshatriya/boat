@@ -15,8 +15,9 @@ arr= JSON.parse(localStorage.getItem("logindata"))||[]
             if(email.value!=""||password.value!=""||mobile.value!=""){
                 arr.push(obj)
                 localStorage.setItem("logindata",JSON.stringify(arr));
-                alert("Account Created Successful")
-                window.location.href="home.html"
+                alert("Account Created Successfull")
+                window.location.href="index.html"
+                localStorage.setItem("login_status","true")
             }
                 else{
                     alert("Fill All Details")

@@ -18,6 +18,7 @@
     // }
     
   function logout(){
-    alert("logout Successfuly")
+    alert("logout Successfully")
     window.location.href="index.html"
+    localStorage.setItem("login_status","flase")
   }

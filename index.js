@@ -1,4 +1,15 @@
-
+logindata=localStorage.getItem("login_status")
+if(logindata=="true"){
+  function login_logout(){
+    
+    window.location.href="logout.html"
+    console.log(logindata)
+  }
+}else{
+  function login_logout(){
+    window.location.href="login.html"
+  }
+}
 
 var myIndex = 0;
 carousel();
@@ -109,6 +120,7 @@ arr=[
     },
    ]
   arr.forEach(function (el,i){
+    
     cart=document.createElement("div");
     image=document.createElement("img");
     image.src=el.img;

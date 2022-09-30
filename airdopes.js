@@ -124,4 +124,3 @@ arr=[
   function addcart(el){
     cart.push(el);
     localStorage.setItem("yourcart",JSON.stringify(cart));
-  }

@@ -11,20 +11,7 @@ if(logindata=="true"){
   }
 }
 
-var myIndex = 0;
-carousel();
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("slidimg");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
 arr=[
   {
     id: "Airdopes",
@@ -93,32 +80,7 @@ arr=[
   
   ];
   
-  arr1=[
-    {
-     video: "//cdn.shopify.com/s/files/1/0057/8938/4802/files/quinn_aNMbCNA29Xi8HUyLtIJkh_1300.mp4?v=1198252056860615988",
-     title: "boAt Airdops 190",
-     price: "1299",
-     og_price: "3499",
-    },
-    {
-     video: "//cdn.shopify.com/s/files/1/0057/8938/4802/files/quinn_Icbu8Gdl3GYtBy9W97q10_1200.mp4?v=16238232401341532396",
-     title: "boAt Stom Pro Call",
-     price: "1799",
-     og_price: "7990",
-    },
-    {
-     video: "//cdn.shopify.com/s/files/1/0057/8938/4802/files/quinn_rfcpupPH91wNHtK3BOvFW_1200.mp4?v=8749322954131352540",
-     title: "boAt Xtend Talk",
-     price: "2999",
-     og_price: "6990",
-    },
-    {
-     video: "//cdn.shopify.com/s/files/1/0057/8938/4802/files/quinn_rq_O5tqSZIIgR13t0gUaN_800.mp4?v=6083534206712186131",
-     title: "boAt Airdoes 141R",
-     price: "1499",
-     og_price: "2999",
-    },
-   ]
+  
   arr.forEach(function (el,i){
     
     cart=document.createElement("div");
@@ -157,28 +119,7 @@ arr=[
     image.src=i.img
   }
 
-  arr1.forEach(function (el){
-    cart=document.createElement("div");
-    video=document.createElement("video")
-    video.src=el.video;
-    video.autoplay="true";
-    video.muted="true"
-    video.loop="none"
-    title=document.createElement("h2");
-    title.innerText=el.title;
-    price=document.createElement("h1");
-    price.innerText=el.price;
-    og_price=document.createElement("p");
-    og_price.innerText=el.og_price;
-    btn=document.createElement("button");
-    btn.innerText="Add To Cart"
-    btn.addEventListener("click",function(){
-      addcart(el)
-    });
-    cart.append(video,title,price,og_price,btn);
-    document.querySelector("#video").append(cart)
-    localStorage.setItem("data",JSON.stringify(el))
-  })
+  
   cart=JSON.parse(localStorage.getItem("yourcart"))||[];
   function addcart(el){
     cart.push(el);

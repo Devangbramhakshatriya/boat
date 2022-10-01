@@ -21,9 +21,9 @@
             pass=document.querySelector("#password").value;
         getdata=JSON.parse(localStorage.getItem("logindata"))
         if (getdata.some((e)=>{return e.email==email && e.password==pass})){
-            alert("Login Success Full")
-            window.location.href="home.html"
-            
+            alert("Login Successful")
+            window.location.href="index.html"
+            localStorage.setItem("login_status","true")
         }else{
             alert("please enter corecr details")
         }

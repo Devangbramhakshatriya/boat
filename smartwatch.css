@@ -185,6 +185,10 @@ a{
     margin-left: 20px ;
     color: brown;
 }
+#head{
+    padding: 15px 15px 15px 15px;
+    text-align: center;   
+}
             
             /* medium size */
 @media all and (min-width:700px)and (max-width:1000px) {

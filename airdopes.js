@@ -110,6 +110,9 @@ arr=[
   arr.forEach(function (el,i){
     
     cart=document.createElement("div");
+    cart.addEventListener("click", function(){
+      info(el)
+    } )
     image=document.createElement("img");
     image.src=el.img;
     image.onmouseover=function(){
@@ -137,6 +140,7 @@ arr=[
   function addcart(el){
     cart.push(el);
     localStorage.setItem("yourcart",JSON.stringify(cart));
+    
   }
   function onimg(i){
     image.src=i.img2
@@ -144,9 +148,23 @@ arr=[
   function outimg(i){
     image.src=i.img
   }
-  
+  data=[]
+  function info(el){
+    data.push(el)
+    window.location.href="information.html";
+    localStorage.setItem("information",JSON.stringify(data));
+  }
   cart=JSON.parse(localStorage.getItem("yourcart"))||[];
   function addcart(el){
     cart.push(el);
+    alert("Item Added Successlly In Cart")
     localStorage.setItem("yourcart",JSON.stringify(cart));
   }
+  aa=localStorage.getItem("count");
+  if(aa==null){
+    document.querySelector("#count>h6").innerText=0;
+  }else{
+    document.querySelector("#count>h6").innerText=aa
+    
+  }
+ 

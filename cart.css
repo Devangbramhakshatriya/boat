@@ -1,0 +1,137 @@
+body{
+    padding: 0%;
+    margin: 0%;
+}
+#yourcart>p>span{
+    margin-left: 20px;
+}
+#container{
+    width: 50%;
+    margin: auto;
+}
+#container>#yourcart{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    text-align: center;
+
+}
+#container>#yourcart>p{
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    display: flex;
+    line-height: 3px;
+}
+#container>#yourcart>button{
+    background-color: red;
+    border: none;
+    font-size: 30px;
+    color: white;
+}
+#order{
+    width: 100%;
+    height: 280px;
+    border-bottom: 1px solid gray;
+    overflow-y: scroll;
+    
+}
+#order::-webkit-scrollbar{
+    overflow: hidden;
+}
+#order>div{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#order>h1{
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+}
+#order>div>div:nth-child(1){
+    width: 30%;
+}
+#order>div>div:nth-child(2){
+    width: 60%;
+}
+#order>div>div>img{
+    width: 100%;
+}
+#order>div>div>h3{
+    font-size: 25px;
+}
+#order>div>div:nth-child(2)>p{
+    line-height: 0px;
+    text-decoration: line-through;
+}
+#order>div>div:nth-child(2)>h2{
+    line-height: 0px;
+    color: maroon;
+}
+#order>div>div:nth-child(3){
+    width: 20%;
+    text-align: center;
+    
+}
+/* #order>div>div:nth-child(3)>button{
+    color: red;
+    padding-top: 20px;
+    width: 20px;
+    height: 20px;
+} */
+.delete{
+ background-color: transparent;
+ border: none;
+ font-size: 20px;
+ margin-top: 50px;
+}
+
+
+
+
+#payment{
+    width: 100%;
+    height: 270px;
+    z-index: 100;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#payment>h3{
+display: flex;
+justify-content: space-between;
+padding: 20px;
+}
+#payment>button:nth-child(2){
+    width: 90%;
+    margin: auto;
+    height: 60px;
+    color: white;
+    background-color: red;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+#payment>button:nth-child(3){
+    width: 90%;
+    margin: auto;
+    height: 60px;
+    color: red;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: 2px solid red;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    align-items: center;
+}

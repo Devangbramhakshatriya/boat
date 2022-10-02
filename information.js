@@ -48,9 +48,5 @@ arr.forEach(function (el,i){
     localStorage.setItem("yourcart",JSON.stringify(cart));
    rel()
   }
-
-  aa=localStorage.getItem("count");
-  document.querySelector("#count>h6").innerText=aa
-  function rel(){
-    window.location.reload()
-  }
+  d=JSON.parse(localStorage.getItem("yourcart"))
+  document.querySelector("#count>h6").innerText=d.length

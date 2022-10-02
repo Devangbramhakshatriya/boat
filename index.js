@@ -195,12 +195,5 @@ data=[]
     localStorage.setItem("yourcart",JSON.stringify(cart));
     
   }
-  count=localStorage.getItem("count")
-  if(count==null){
-    document.querySelector("#count>h6").innerText=0
-    
-  }else{
-    document.querySelector("#count>h6").innerText=count
-    localStorage.setItem("count",count)
-  }
-
+  d=JSON.parse(localStorage.getItem("yourcart"))
+  document.querySelector("#count>h6").innerText=d.length

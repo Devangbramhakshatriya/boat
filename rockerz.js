@@ -162,10 +162,5 @@ arr=[
     alert("Item Added Successlly In Cart")
     localStorage.setItem("yourcart",JSON.stringify(cart));
   }
-  aa=localStorage.getItem("count");
-  if(aa==null){
-    document.querySelector("#count>h6").innerText=0;
-  }else{
-    document.querySelector("#count>h6").innerText=aa
-    
-  }
+  d=JSON.parse(localStorage.getItem("yourcart"))
+  document.querySelector("#count>h6").innerText=d.length

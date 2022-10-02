@@ -122,13 +122,16 @@ arr=[
   arr.forEach(function (el,i){
     
     cart=document.createElement("div");
+    cart.addEventListener("click", function(){
+      info(el)
+    } )
     image=document.createElement("img");
     image.src=el.img;
-    image.onmouseover=function(){
-      onimg(el,i)
+    image.mouseover=function(){
+      onimg(el)
     }
     image.onmouseout=function(){
-      outimg(el,i)
+      outimg(el)
     }
     title=document.createElement("h2");
     title.innerText=el.product_name;
@@ -150,11 +153,17 @@ arr=[
     cart.push(el);
     localStorage.setItem("yourcart",JSON.stringify(cart));
   }
-  function onimg(i){
-    image.src=i.img2
+  function onimg(el){
+    image.src=el.img2
   }
-  function outimg(i){
-    image.src=i.img
+  function outimg(el){
+    image.src=el.img
+  }
+data=[]
+  function info(el){
+    data.push(el)
+    window.location.href="information.html";
+    localStorage.setItem("information",JSON.stringify(data));
   }
 
   arr1.forEach(function (el){
@@ -182,5 +191,16 @@ arr=[
   cart=JSON.parse(localStorage.getItem("yourcart"))||[];
   function addcart(el){
     cart.push(el);
+    alert("Item Added Successlly In Cart")
     localStorage.setItem("yourcart",JSON.stringify(cart));
+    
   }
+  count=localStorage.getItem("count")
+  if(count==null){
+    document.querySelector("#count>h6").innerText=0
+    
+  }else{
+    document.querySelector("#count>h6").innerText=count
+    localStorage.setItem("count",count)
+  }
+

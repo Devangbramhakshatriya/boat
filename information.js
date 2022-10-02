@@ -50,3 +50,5 @@ arr.forEach(function (el,i){
   }
   d=JSON.parse(localStorage.getItem("yourcart"))
   document.querySelector("#count>h6").innerText=d.length
+
+  
